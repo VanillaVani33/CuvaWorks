@@ -4,12 +4,6 @@
 #include "CuvaWorks/cuvaworks.h"
 // include cuvarand
 #include "CuvaWorks/cuvarand.h"
-//#include <stdio.h>
-//#include <cstdio>
-//#include <stdlib.h>
-
-
-
 
 
 // Structure holding kernel arguments, used as "void** arg"
@@ -37,8 +31,9 @@ _global void InitCuvaRand(KernelID id, void** arg) {
 
 	// Initialize an instance of CuvaRand
 	initCuvarand(i, 0, 0, &args->cuva[i]);
-	
+
 }
+
 
 // Defining a Cuva Kernel that adds two vectors, c = a + b
 _global void AddAB(KernelID id, void** arg) {
@@ -56,7 +51,7 @@ _global void AddAB(KernelID id, void** arg) {
 }
 
 int main() {
-	
+
 	// memory to preallocate (10 kb)
 	size_t prealloc = 1024ul * 10ull;
 
