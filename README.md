@@ -4,6 +4,12 @@ and CPU programming simultaneously. It acts as an interface between the programm
 and the machine so that a program meant to be run using an Nvidia Cuda Device 
 could also run on the CPU, should the user decide to.
 
+TO IMPLEMENT -----------------------------------------------------------------------
+
+Just add "#include "CuvaWorks/cuvaworks.h" to the beginning of one of your project files.
+To use CuvaRand, the random engine that implements CuRand Kernel used for generating 
+random numbers, just add "#include CuvaWorks/cuvarand.h" to the beginning of one of your prject files.
+
 CHANGE FILE EXTENSION --------------------------------------------------------------
 
 If you have Nvidia CUDA installed, copy all contents of your file containing "int main()" 
